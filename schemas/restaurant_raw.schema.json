@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "restaurant_raw.schema.json",
+  "title": "Restaurant Raw Data",
+  "description": "Schema for raw restaurant data from Google Places API",
+  "type": "object",
+  "required": ["fetch_date", "restaurants"],
+  "properties": {
+    "fetch_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Date when the data was fetched"
+    },
+    "restaurants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["city", "name", "place_id"],
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "City name where the restaurant is located"
+          },
+          "name": {
+            "type": "string",
+            "description": "Restaurant name"
+          },
+          "address": {
+            "type": ["string", "null"],
+            "description": "Full address of the restaurant"
+          },
+          "place_id": {
+            "type": "string",
+            "description": "Google Places API place ID"
+          },
+          "website": {
+            "type": ["string", "null"],
+            "format": "uri",
+            "description": "Restaurant website URL"
+          },
+          "lat": {
+            "type": "number",
+            "minimum": 41,
+            "maximum": 84,
+            "description": "Latitude coordinate"
+          },
+          "lon": {
+            "type": "number",
+            "minimum": -141,
+            "maximum": -52,
+            "description": "Longitude coordinate"
+          },
+          "rating": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 5,
+            "description": "Google rating"
+          },
+          "user_ratings_total": {
+            "type": ["integer", "null"],
+            "minimum": 0,
+            "description": "Total number of user ratings"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+# Poutine Index - Python Dependencies
+
+# Data collection
+requests>=2.31.0
+
+# Schema validation
+jsonschema>=4.20.0
+
+# Testing
+pytest>=7.4.0
+pytest-playwright>=0.4.0
+
+# Playwright (install browsers separately with: playwright install chromium)
+playwright>=1.40.0

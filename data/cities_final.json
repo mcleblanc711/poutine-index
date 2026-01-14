@@ -1,0 +1,122 @@
+{
+  "last_updated": "2025-01-15",
+  "data_version": "1.0.0",
+  "cities": [
+    {
+      "name": "Montreal",
+      "province": "QC",
+      "lat": 45.5017,
+      "lon": -73.5673,
+      "prices": {
+        "small": {
+          "mean": 7.50,
+          "median": 7.25,
+          "min": 5.50,
+          "max": 9.00
+        },
+        "regular": {
+          "mean": 10.75,
+          "median": 10.50,
+          "min": 8.00,
+          "max": 13.00
+        },
+        "large": {
+          "mean": 14.25,
+          "median": 14.00,
+          "min": 11.00,
+          "max": 17.50
+        }
+      },
+      "sample_size": 12,
+      "minimum_wage": 15.75,
+      "affordability_index": 40.95
+    },
+    {
+      "name": "Toronto",
+      "province": "ON",
+      "lat": 43.6532,
+      "lon": -79.3832,
+      "prices": {
+        "small": {
+          "mean": 8.25,
+          "median": 8.00,
+          "min": 6.00,
+          "max": 10.50
+        },
+        "regular": {
+          "mean": 12.50,
+          "median": 12.00,
+          "min": 9.00,
+          "max": 16.00
+        },
+        "large": {
+          "mean": 16.75,
+          "median": 16.50,
+          "min": 13.00,
+          "max": 21.00
+        }
+      },
+      "sample_size": 10,
+      "minimum_wage": 17.20,
+      "affordability_index": 43.60
+    },
+    {
+      "name": "Vancouver",
+      "province": "BC",
+      "lat": 49.2827,
+      "lon": -123.1207,
+      "prices": {
+        "small": {
+          "mean": 9.00,
+          "median": 9.00,
+          "min": 7.00,
+          "max": 11.00
+        },
+        "regular": {
+          "mean": 13.25,
+          "median": 13.00,
+          "min": 10.00,
+          "max": 17.00
+        },
+        "large": {
+          "mean": 17.50,
+          "median": 17.00,
+          "min": 14.00,
+          "max": 22.00
+        }
+      },
+      "sample_size": 8,
+      "minimum_wage": 17.40,
+      "affordability_index": 45.69
+    },
+    {
+      "name": "Calgary",
+      "province": "AB",
+      "lat": 51.0447,
+      "lon": -114.0719,
+      "prices": {
+        "small": {
+          "mean": 7.75,
+          "median": 7.50,
+          "min": 5.50,
+          "max": 10.00
+        },
+        "regular": {
+          "mean": 11.25,
+          "median": 11.00,
+          "min": 8.50,
+          "max": 14.00
+        },
+        "large": {
+          "mean": 15.00,
+          "median": 15.00,
+          "min": 12.00,
+          "max": 18.00
+        }
+      },
+      "sample_size": 9,
+      "minimum_wage": 15.00,
+      "affordability_index": 45.00
+    }
+  ]
+}

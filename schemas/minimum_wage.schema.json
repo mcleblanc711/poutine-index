@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "minimum_wage.schema.json",
+  "title": "Minimum Wage Data",
+  "description": "Schema for Canadian provincial/territorial minimum wage data",
+  "type": "object",
+  "required": ["last_updated", "currency", "wages"],
+  "properties": {
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when wage data was last updated"
+    },
+    "currency": {
+      "type": "string",
+      "const": "CAD",
+      "description": "Currency code"
+    },
+    "wages": {
+      "type": "object",
+      "propertyNames": {
+        "enum": ["AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT"]
+      },
+      "additionalProperties": {
+        "type": "object",
+        "required": ["province_name", "hourly_wage", "effective_date"],
+        "properties": {
+          "province_name": {
+            "type": "string",
+            "description": "Full name of the province/territory"
+          },
+          "hourly_wage": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Hourly minimum wage in CAD"
+          },
+          "effective_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date when this wage became effective"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "price_entry.schema.json",
+  "title": "Price Entry",
+  "description": "Schema for extracted poutine price data",
+  "type": "object",
+  "required": ["city", "restaurant_name", "extraction_date", "prices", "confidence"],
+  "properties": {
+    "city": {
+      "type": "string",
+      "description": "City name"
+    },
+    "restaurant_name": {
+      "type": "string",
+      "description": "Name of the restaurant"
+    },
+    "source_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "URL where price was found"
+    },
+    "extraction_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when price was extracted (YYYY-MM-DD)"
+    },
+    "prices": {
+      "type": "object",
+      "description": "Prices by size in CAD",
+      "minProperties": 1,
+      "properties": {
+        "small": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Small size price"
+        },
+        "regular": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Regular size price"
+        },
+        "large": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Large size price"
+        }
+      },
+      "additionalProperties": false
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "description": "Additional notes about the price extraction"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "Confidence level of the extracted price"
+    }
+  }
+}

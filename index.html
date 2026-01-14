@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Poutine Index: Visualizing poutine prices and affordability across Canadian cities, inspired by The Economist's Big Mac Index.">
+  <meta name="keywords" content="poutine, Canada, prices, affordability, Big Mac Index, minimum wage">
+  <meta name="author" content="Poutine Index Contributors">
+
+  <title>The Poutine Index</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍟</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <h1>The Poutine Index</h1>
+    <p class="subtitle">What does a poutine cost across Canada?</p>
+  </header>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="index.html" class="active">Map</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="https://github.com/YOUR_USERNAME/poutine-index" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+
+  <main class="main">
+    <div class="map-container">
+      <div id="map" role="application" aria-label="Interactive map showing poutine prices across Canadian cities"></div>
+    </div>
+
+    <section class="info-panel" aria-labelledby="about-heading">
+      <h2 id="about-heading">About the Poutine Index</h2>
+      <p>
+        Inspired by <em>The Economist's</em> Big Mac Index, the Poutine Index tracks the price of
+        classic poutine (fries, cheese curds, and gravy) across Canadian cities. We also calculate
+        an "affordability index" showing how many minutes of minimum wage work it takes to buy a poutine.
+      </p>
+      <p>
+        Click on any city marker to see average prices for small, regular, and large portions,
+        along with the local affordability index and the number of restaurants sampled.
+      </p>
+      <p>
+        <a href="methodology.html">Learn more about our methodology &rarr;</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>
+        Data sourced from restaurant menus. Prices are for classic poutine only.
+      </p>
+      <p class="last-updated" id="last-updated">Last updated: Loading...</p>
+      <p>
+        <a href="https://github.com/YOUR_USERNAME/poutine-index">View on GitHub</a> |
+        <a href="methodology.html">Methodology</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+
+  <!-- Custom JS -->
+  <script src="js/map.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+{
+  "cities": [
+    {
+      "name": "Toronto",
+      "province": "ON",
+      "lat": 43.6532,
+      "lon": -79.3832,
+      "population": 6202225
+    },
+    {
+      "name": "Montreal",
+      "province": "QC",
+      "lat": 45.5017,
+      "lon": -73.5673,
+      "population": 4291732
+    },
+    {
+      "name": "Vancouver",
+      "province": "BC",
+      "lat": 49.2827,
+      "lon": -123.1207,
+      "population": 2642825
+    },
+    {
+      "name": "Calgary",
+      "province": "AB",
+      "lat": 51.0447,
+      "lon": -114.0719,
+      "population": 1481806
+    },
+    {
+      "name": "Edmonton",
+      "province": "AB",
+      "lat": 53.5461,
+      "lon": -113.4938,
+      "population": 1418118
+    },
+    {
+      "name": "Ottawa-Gatineau",
+      "province": "ON",
+      "lat": 45.4215,
+      "lon": -75.6972,
+      "population": 1408745
+    },
+    {
+      "name": "Winnipeg",
+      "province": "MB",
+      "lat": 49.8951,
+      "lon": -97.1384,
+      "population": 834678
+    },
+    {
+      "name": "Quebec City",
+      "province": "QC",
+      "lat": 46.8139,
+      "lon": -71.2080,
+      "population": 839311
+    },
+    {
+      "name": "Hamilton",
+      "province": "ON",
+      "lat": 43.2557,
+      "lon": -79.8711,
+      "population": 785184
+    },
+    {
+      "name": "Kitchener-Waterloo",
+      "province": "ON",
+      "lat": 43.4516,
+      "lon": -80.4925,
+      "population": 575847
+    },
+    {
+      "name": "London",
+      "province": "ON",
+      "lat": 42.9849,
+      "lon": -81.2453,
+      "population": 543551
+    },
+    {
+      "name": "Victoria",
+      "province": "BC",
+      "lat": 48.4284,
+      "lon": -123.3656,
+      "population": 397237
+    },
+    {
+      "name": "Halifax",
+      "province": "NS",
+      "lat": 44.6488,
+      "lon": -63.5752,
+      "population": 465703
+    },
+    {
+      "name": "Oshawa",
+      "province": "ON",
+      "lat": 43.8971,
+      "lon": -78.8658,
+      "population": 415311
+    },
+    {
+      "name": "Windsor",
+      "province": "ON",
+      "lat": 42.3149,
+      "lon": -83.0364,
+      "population": 343642
+    },
+    {
+      "name": "Saskatoon",
+      "province": "SK",
+      "lat": 52.1579,
+      "lon": -106.6702,
+      "population": 331650
+    },
+    {
+      "name": "Regina",
+      "province": "SK",
+      "lat": 50.4452,
+      "lon": -104.6189,
+      "population": 261684
+    },
+    {
+      "name": "St. Catharines-Niagara",
+      "province": "ON",
+      "lat": 43.1594,
+      "lon": -79.2469,
+      "population": 433604
+    },
+    {
+      "name": "St. John's",
+      "province": "NL",
+      "lat": 47.5615,
+      "lon": -52.7126,
+      "population": 212579
+    },
+    {
+      "name": "Kelowna",
+      "province": "BC",
+      "lat": 49.8880,
+      "lon": -119.4960,
+      "population": 222162
+    },
+    {
+      "name": "Banff",
+      "province": "AB",
+      "lat": 51.1784,
+      "lon": -115.5708,
+      "population": 8305
+    },
+    {
+      "name": "Yellowknife",
+      "province": "NT",
+      "lat": 62.4540,
+      "lon": -114.3718,
+      "population": 20340
+    },
+    {
+      "name": "Whitehorse",
+      "province": "YT",
+      "lat": 60.7212,
+      "lon": -135.0568,
+      "population": 28201
+    },
+    {
+      "name": "Iqaluit",
+      "province": "NU",
+      "lat": 63.7467,
+      "lon": -68.5170,
+      "population": 7429
+    }
+  ]
+}

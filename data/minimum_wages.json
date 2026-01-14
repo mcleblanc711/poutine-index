@@ -1,0 +1,71 @@
+{
+  "last_updated": "2025-01-01",
+  "currency": "CAD",
+  "wages": {
+    "AB": {
+      "province_name": "Alberta",
+      "hourly_wage": 15.00,
+      "effective_date": "2024-10-01"
+    },
+    "BC": {
+      "province_name": "British Columbia",
+      "hourly_wage": 17.40,
+      "effective_date": "2024-06-01"
+    },
+    "MB": {
+      "province_name": "Manitoba",
+      "hourly_wage": 15.80,
+      "effective_date": "2024-10-01"
+    },
+    "NB": {
+      "province_name": "New Brunswick",
+      "hourly_wage": 15.30,
+      "effective_date": "2024-04-01"
+    },
+    "NL": {
+      "province_name": "Newfoundland and Labrador",
+      "hourly_wage": 15.60,
+      "effective_date": "2024-04-01"
+    },
+    "NS": {
+      "province_name": "Nova Scotia",
+      "hourly_wage": 15.20,
+      "effective_date": "2024-04-01"
+    },
+    "NT": {
+      "province_name": "Northwest Territories",
+      "hourly_wage": 16.70,
+      "effective_date": "2024-09-01"
+    },
+    "NU": {
+      "province_name": "Nunavut",
+      "hourly_wage": 19.00,
+      "effective_date": "2024-01-01"
+    },
+    "ON": {
+      "province_name": "Ontario",
+      "hourly_wage": 17.20,
+      "effective_date": "2024-10-01"
+    },
+    "PE": {
+      "province_name": "Prince Edward Island",
+      "hourly_wage": 15.40,
+      "effective_date": "2024-04-01"
+    },
+    "QC": {
+      "province_name": "Quebec",
+      "hourly_wage": 15.75,
+      "effective_date": "2024-05-01"
+    },
+    "SK": {
+      "province_name": "Saskatchewan",
+      "hourly_wage": 15.00,
+      "effective_date": "2024-10-01"
+    },
+    "YT": {
+      "province_name": "Yukon",
+      "hourly_wage": 17.59,
+      "effective_date": "2024-04-01"
+    }
+  }
+}

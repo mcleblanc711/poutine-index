@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "city_final.schema.json",
+  "title": "Cities Final Data",
+  "description": "Schema for aggregated city data consumed by the frontend",
+  "type": "object",
+  "required": ["last_updated", "data_version", "cities"],
+  "properties": {
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when data was last updated"
+    },
+    "data_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version of the data format"
+    },
+    "cities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "province", "lat", "lon", "prices", "sample_size", "minimum_wage", "affordability_index"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "City name"
+          },
+          "province": {
+            "type": "string",
+            "enum": ["AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT"],
+            "description": "Province/territory code"
+          },
+          "lat": {
+            "type": "number",
+            "minimum": 41,
+            "maximum": 84,
+            "description": "Latitude coordinate"
+          },
+          "lon": {
+            "type": "number",
+            "minimum": -141,
+            "maximum": -52,
+            "description": "Longitude coordinate"
+          },
+          "prices": {
+            "type": "object",
+            "properties": {
+              "small": {
+                "$ref": "#/definitions/priceStats"
+              },
+              "regular": {
+                "$ref": "#/definitions/priceStats"
+              },
+              "large": {
+                "$ref": "#/definitions/priceStats"
+              }
+            }
+          },
+          "sample_size": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Number of restaurants sampled"
+          },
+          "minimum_wage": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Provincial minimum wage in CAD/hour"
+          },
+          "affordability_index": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Minutes of minimum wage work to buy a regular poutine"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "priceStats": {
+      "type": ["object", "null"],
+      "properties": {
+        "mean": {
+          "type": "number",
+          "minimum": 0
+        },
+        "median": {
+          "type": "number",
+          "minimum": 0
+        },
+        "min": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": ["mean", "median", "min", "max"]
+    }
+  }
+}

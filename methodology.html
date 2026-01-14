@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Methodology for the Poutine Index: How we collect, validate, and analyze poutine prices across Canada.">
+
+  <title>Methodology - The Poutine Index</title>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍟</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <h1>The Poutine Index</h1>
+    <p class="subtitle">What does a poutine cost across Canada?</p>
+  </header>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="index.html">Map</a>
+    <a href="methodology.html" class="active">Methodology</a>
+    <a href="https://github.com/YOUR_USERNAME/poutine-index" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+
+  <main class="main">
+    <article class="methodology-content">
+      <h2>Overview</h2>
+      <p>
+        The Poutine Index is inspired by <em>The Economist's</em> Big Mac Index, which uses the price of
+        a Big Mac to compare purchasing power across countries. Similarly, we use classic poutine—a
+        quintessentially Canadian dish—to compare food costs and affordability across Canadian cities.
+      </p>
+
+      <h2>What Qualifies as Classic Poutine?</h2>
+      <p>
+        For consistency, we only track prices for <strong>classic poutine</strong>, defined as:
+      </p>
+      <ul>
+        <li>French fries</li>
+        <li>Fresh cheese curds</li>
+        <li>Brown gravy</li>
+      </ul>
+      <p>
+        We exclude "loaded" or topped poutines (e.g., with pulled pork, bacon, vegetables, or other additions)
+        because their prices vary significantly based on toppings, making comparisons unreliable.
+      </p>
+
+      <h2>Size Normalization</h2>
+      <p>
+        Restaurants use inconsistent size names (e.g., "regular" vs. "medium" vs. "single"). We normalize
+        all sizes into three categories:
+      </p>
+      <ul>
+        <li><strong>Small:</strong> The smallest portion offered, typically 200-300g</li>
+        <li><strong>Regular:</strong> The standard/medium portion, or the only size if just one is offered</li>
+        <li><strong>Large:</strong> The largest portion, sometimes called "family" or "jumbo"</li>
+      </ul>
+      <p>
+        When only one size is available, it is classified as "Regular" for comparison purposes.
+      </p>
+
+      <h2>Restaurant Selection Criteria</h2>
+      <p>
+        We focus on independent and local chain restaurants to get a representative sample of each city's
+        poutine market. The following types of establishments are <strong>excluded</strong>:
+      </p>
+      <ul>
+        <li>National fast food chains (McDonald's, Burger King, Wendy's, A&W, etc.)</li>
+        <li>National poutine chains (Smoke's Poutinerie, New York Fries)</li>
+        <li>Quick-service chains (Harvey's, Tim Hortons, Dairy Queen)</li>
+        <li>Stadium, airport, or tourist-trap venues with inflated prices</li>
+      </ul>
+      <p>
+        Restaurants are discovered using Google Places API with the search query "poutine restaurant" near
+        each city's coordinates. We aim for approximately 10-15 data points per city.
+      </p>
+
+      <h2>The Affordability Index</h2>
+      <p>
+        The affordability index measures how many minutes of minimum wage work are required to purchase
+        a regular-sized classic poutine in each city. The formula is:
+      </p>
+      <div class="formula">
+        Affordability Index = (Regular Price / Provincial Minimum Wage) × 60
+      </div>
+      <p>
+        For example, if a regular poutine costs $12.00 and the provincial minimum wage is $15.00/hour:
+      </p>
+      <div class="formula">
+        ($12.00 / $15.00) × 60 = 48 minutes
+      </div>
+      <p>
+        A higher affordability index means poutine is less affordable relative to local wages. This metric
+        allows comparison between cities with different price levels and wage standards.
+      </p>
+
+      <h3>Minimum Wage Data</h3>
+      <p>
+        We use the general minimum wage for each province or territory (not special rates for specific
+        industries or age groups). Minimum wage data is updated quarterly to reflect legislated changes.
+      </p>
+
+      <h2>Data Collection Process</h2>
+      <ol>
+        <li>
+          <strong>Restaurant Discovery:</strong> Google Places API identifies poutine-serving restaurants
+          in each target city.
+        </li>
+        <li>
+          <strong>Price Extraction:</strong> Restaurant websites and online menus are reviewed to find
+          classic poutine prices. Prices are extracted manually with LLM assistance.
+        </li>
+        <li>
+          <strong>Validation:</strong> Automated scripts check for outliers (prices more than 2 standard
+          deviations from city mean), missing data, and stale information.
+        </li>
+        <li>
+          <strong>Aggregation:</strong> City-level statistics (mean, median, min, max) are calculated
+          and combined with minimum wage data.
+        </li>
+      </ol>
+
+      <h2>Confidence Levels</h2>
+      <p>
+        Each price data point is assigned a confidence level:
+      </p>
+      <ul>
+        <li><strong>High:</strong> Price clearly listed on official website or menu</li>
+        <li><strong>Medium:</strong> Price inferred from menu (e.g., category pricing) or third-party source</li>
+        <li><strong>Low:</strong> Estimated from similar items or older data; used only when necessary</li>
+      </ul>
+
+      <h2>Update Frequency</h2>
+      <p>
+        We aim to update price data <strong>quarterly</strong>. Minimum wage data is updated whenever
+        provincial/territorial governments announce changes. The "last updated" date on the map reflects
+        the most recent data processing run.
+      </p>
+
+      <h2>Limitations and Caveats</h2>
+      <ul>
+        <li>
+          <strong>Sample size:</strong> Some smaller cities may have fewer data points, making averages
+          less reliable.
+        </li>
+        <li>
+          <strong>Price volatility:</strong> Restaurant prices change frequently. Our data represents
+          a snapshot in time.
+        </li>
+        <li>
+          <strong>Online menu availability:</strong> Not all restaurants have online menus, potentially
+          biasing the sample toward establishments with web presence.
+        </li>
+        <li>
+          <strong>Regional variations:</strong> Within large metropolitan areas (e.g., Toronto, Montreal),
+          prices may vary significantly by neighbourhood.
+        </li>
+        <li>
+          <strong>Taxes not included:</strong> Prices shown are menu prices before applicable taxes.
+        </li>
+        <li>
+          <strong>Delivery markups excluded:</strong> We use dine-in/pickup prices only.
+        </li>
+      </ul>
+
+      <h2>Target Cities</h2>
+      <p>
+        Version 1 of the Poutine Index covers the top 20 Canadian Census Metropolitan Areas (CMAs) by
+        population, plus four additional locations chosen for geographic coverage:
+      </p>
+      <ul>
+        <li>Banff, Alberta (tourist destination)</li>
+        <li>Yellowknife, Northwest Territories</li>
+        <li>Whitehorse, Yukon</li>
+        <li>Iqaluit, Nunavut</li>
+      </ul>
+
+      <h2>Contributing</h2>
+      <p>
+        This is an open-source project. If you'd like to contribute price data, report errors, or suggest
+        improvements, please visit our
+        <a href="https://github.com/YOUR_USERNAME/poutine-index">GitHub repository</a>.
+      </p>
+
+      <h2>License</h2>
+      <p>
+        The Poutine Index is released under the MIT License. Data is provided as-is for educational
+        and informational purposes.
+      </p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>
+        Data sourced from restaurant menus. Prices are for classic poutine only.
+      </p>
+      <p>
+        <a href="https://github.com/YOUR_USERNAME/poutine-index">View on GitHub</a> |
+        <a href="index.html">Back to Map</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
