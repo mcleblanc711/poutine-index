@@ -4,7 +4,7 @@ A "Big Mac Index" style visualization for poutine prices across Canada. This sta
 
 ## Live Site
 
-[View the Poutine Index](https://YOUR_USERNAME.github.io/poutine-index/)
+[View the Poutine Index](https://mcleblanc711.github.io/poutine-index/)
 
 ## Features
 
@@ -38,7 +38,7 @@ A "Big Mac Index" style visualization for poutine prices across Canada. This sta
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/poutine-index.git
+git clone https://github.com/mcleblanc711/poutine-index.git
 cd poutine-index
 
 # Create virtual environment
