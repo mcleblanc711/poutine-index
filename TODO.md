@@ -10,10 +10,10 @@
 ## Next Steps
 
 ### 1. Data Collection (Priority: High)
-- [ ] Set up Google Cloud account and enable Places API
-- [ ] Set environment variable: `export GOOGLE_PLACES_API_KEY="your-key"`
-- [ ] Run `python3 scripts/fetch_restaurants.py` to get restaurant data for all 24 cities
-- [ ] Review `data/restaurants_raw.json` output
+- [x] Set up Google Cloud account and enable Places API
+- [x] Set environment variable: `export GOOGLE_PLACES_API_KEY="your-key"`
+- [x] Run `python3 scripts/fetch_restaurants.py` to get restaurant data for all 24 cities
+- [x] Review `data/restaurants_raw.json` output (352 restaurants fetched)
 
 ### 2. Price Extraction (Priority: High)
 For each city, visit restaurant websites and extract classic poutine prices:
